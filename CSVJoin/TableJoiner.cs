@@ -105,9 +105,9 @@ namespace CSVJoin
                 else if (string.IsNullOrEmpty(r.Cellno) && string.IsNullOrEmpty(r.GisParkID) && !string.IsNullOrEmpty(r.ItsParkID))
                 { r.ItYn = -1; r.GisOx = "N"; r.ItOx = "Y"; r.ErrType = 4; }
                 else if (!string.IsNullOrEmpty(r.Cellno) && string.IsNullOrEmpty(r.GisParkID) && string.IsNullOrEmpty(r.ItsParkID))
-                { r.ErrType = 5; }
+                { r.ErrType = 5; r.GisOx = "N"; r.ItOx = "N"; r.ErrType = 5; }
                 else if (string.IsNullOrEmpty(r.Cellno) && string.IsNullOrEmpty(r.GisParkID) && string.IsNullOrEmpty(r.ItsParkID))
-                { r.ErrType = 6; }
+                { r.ErrType = 6; r.GisOx = "N"; r.ItOx = "N"; r.ErrType = 6; }
             }
 
             return filteredResults;
